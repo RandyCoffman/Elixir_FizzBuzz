@@ -1,5 +1,5 @@
 
-defmodule FizzBuzz do # Module is like a class in any other language
+defmodule FizzBuzz do # Module is a container for these functions. Example for this would be to store your functions into another file
     def play(min, max) do  # Master function
         Enum.each(min..max, fn(num)-> play(num) end ) # Iterates through each number from min to max then calls the play(num) function
     end
@@ -14,10 +14,6 @@ defmodule FizzBuzz do # Module is like a class in any other language
 
     def play(num) when rem(num, 5) === 0 do
         IO.puts "Buzz"
-    end
-
-    def play(num) when rem(num, 15) === 0 do
-        IO.puts "FizzBuzz"
     end
 
     def play(num) do
